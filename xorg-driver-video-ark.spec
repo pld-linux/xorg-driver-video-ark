@@ -1,5 +1,5 @@
 Summary:	X.org video driver for ARK Logic video adapters
-Summary(pl.UTF-8):   Sterownik obrazu X.org do kart graficznych ARK Logic
+Summary(pl.UTF-8):	Sterownik obrazu X.org do kart graficznych ARK Logic
 Name:		xorg-driver-video-ark
 Version:	0.6.0
 Release:	0.1
