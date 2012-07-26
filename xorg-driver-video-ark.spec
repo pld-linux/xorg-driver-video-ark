@@ -1,12 +1,12 @@
 Summary:	X.org video driver for ARK Logic video adapters
 Summary(pl.UTF-8):	Sterownik obrazu X.org do kart graficznych ARK Logic
 Name:		xorg-driver-video-ark
-Version:	0.7.4
-Release:	2
+Version:	0.7.5
+Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-video-ark-%{version}.tar.bz2
-# Source0-md5:	21f5db0beca2d3d99aae739174d5b44f
+# Source0-md5:	2e9809b5ae3f01a56be0d6e5441da03c
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
@@ -15,8 +15,6 @@ BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	rpmbuild(macros) >= 1.389
 BuildRequires:	xorg-lib-libpciaccess-devel >= 0.12.901
 BuildRequires:	xorg-proto-fontsproto-devel
-BuildRequires:	xorg-proto-randrproto-devel
-BuildRequires:	xorg-proto-renderproto-devel
 BuildRequires:	xorg-proto-xextproto-devel
 BuildRequires:	xorg-util-util-macros >= 1.8
 BuildRequires:	xorg-xserver-server-devel >= 1.0.99.901
@@ -54,7 +52,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm -f $RPM_BUILD_ROOT%{_libdir}/xorg/modules/*/*.la
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/xorg/modules/*/*.la
 
 %clean
 rm -rf $RPM_BUILD_ROOT
